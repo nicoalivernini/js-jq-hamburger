@@ -1,11 +1,22 @@
-//Grandi problemi
-//Trovare il menù hamburger nel HTML
-//elemento hamburger a href con dentro i class="fas fa-bars"
-//Contenuto menù hamburger div class="hamburger-menu";
+//Dichiaro la variabile e inserisco dentro il
+//collegamento all'a contente il simbolo del menù
+var hamburgerMenu = $('.header-right > a');
 
-//Divisione in piccoli problemi
-//Di partenza il div hamburger menù non deve vedersi
+//Al click sul hamburgerMenu viene eseguita questa funzione
+hamburgerMenu.click(function() {
+  //Richiamiamo la lista contente il menù e gli assegniamo una variabile
+  var listaMenu = $('.hamburger-menu');
+  //Diciamo alla lista contente il menù che deve farsi vedere
+  listaMenu.show();
+});
 
-// Al click sull'elemento hamburger il div hamburger menu deve tirarsi scendere
+//Dichiariamo la variabile hamburgerMenuChiusura che riprende il pulsante di chiusura
+var hamburgerMenuChiusura = $('.close');
 
-//Cliccando nuovamente il div hamburger deve risalire
+//Al click su hamburgerMenuChiusura la funzione nasconderà listaMenu
+hamburgerMenuChiusura.click(function () {
+  //Richiamiamo la lista contente il menù
+  var listaMenu = $('.hamburger-menu');
+  //Diciamo alla lista contente il menù che deve nascondersi
+  listaMenu.hide();
+})
